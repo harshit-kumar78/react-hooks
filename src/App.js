@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import dotenv from "dotenv";
+dotenv.config();
 
 function App() {
+  console.log(process.env.REACT_APP_KEY, process.env.ABC);
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {process.env.REACT_APP_KEY}
         </a>
       </header>
     </div>
